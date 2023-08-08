@@ -1,10 +1,10 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 
-export default function SavingScreen() {
+export default function HomeScreen() {
   return (
-    <View>
-      <Text>Saving</Text>
-    </View>
+    <SafeAreaView>
+      <Text>Home</Text>
+    </SafeAreaView>
   );
 }
 

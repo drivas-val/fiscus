@@ -1,10 +1,10 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 
-export default function CheckerScreen() {
+export default function SavingScreen() {
   return (
-    <View>
-      <Text>Checker</Text>
-    </View>
+    <SafeAreaView>
+      <Text>Saving</Text>
+    </SafeAreaView>
   );
 }
 

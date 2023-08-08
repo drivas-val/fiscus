@@ -2,10 +2,13 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeScreen from "../src/screens/HomeScreen";
-import SavingScreen from "../src/screens/SavingScreen";
-import CheckerScreen from "../src/screens/CheckerScreen/CheckerScreen";
-import BudgetScreen from "../src/screens/BudgetScreen";
+import HomeScreen from "./screens/HomeScreenF/HomeScreen";
+import SavingScreen from "./screens/SavingScreenF/SavingScreen";
+import CheckerScreen from "./screens/CheckerScreenF/CheckerScreen";
+import BudgetScreen from "./screens/BudgetScreenF/BudgetScreen";
+import { Color } from "./constants/color";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import RootStack from "./RootStack";
 
 const Tab = createBottomTabNavigator();
 
@@ -13,28 +16,87 @@ const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator>
+        <Tab.Screen name="RootStack" component={RootStack} />
         <Tab.Screen
-          name="HomeScreen"
+          name="Home"
           component={HomeScreen}
           options={{
+            headerShown: false,
             tabBarIcon: ({ focused }) => (
               <View>
                 <Image
-                  source={require("./assets/homeIcon.png")}
+                  source={require("../assets/homeIcon.png")}
                   resizeMode="contain"
                   style={{
                     width: 25,
                     height: 25,
-                    tintColor: focused ? "red" : "blue",
+                    tintColor: focused ? Color.forest : Color.darkGreen,
                   }}
                 />
               </View>
             ),
           }}
         />
-        <Tab.Screen name="SavingScreen" component={SavingScreen} />
-        <Tab.Screen name="CheckerScreen" component={CheckerScreen} />
-        <Tab.Screen name="BudgetScreen" component={BudgetScreen} />
+        <Tab.Screen
+          name="Budget"
+          component={BudgetScreen}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ focused }) => (
+              <View>
+                <Image
+                  source={require("../assets/budget.png")}
+                  resizeMode="contain"
+                  style={{
+                    width: 25,
+                    height: 25,
+                    tintColor: focused ? Color.forest : Color.darkGreen,
+                  }}
+                />
+              </View>
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Savings"
+          component={SavingScreen}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ focused }) => (
+              <View>
+                <Image
+                  source={require("../assets/saving.png")}
+                  resizeMode="contain"
+                  style={{
+                    width: 25,
+                    height: 25,
+                    tintColor: focused ? Color.forest : Color.darkGreen,
+                  }}
+                />
+              </View>
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Checker"
+          component={CheckerScreen}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ focused }) => (
+              <View>
+                <Image
+                  source={require("../assets/checker.png")}
+                  resizeMode="contain"
+                  style={{
+                    width: 25,
+                    height: 25,
+                    tintColor: focused ? Color.forest : Color.darkGreen,
+                  }}
+                />
+              </View>
+            ),
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );

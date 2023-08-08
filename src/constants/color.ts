@@ -1,4 +1,4 @@
-const Color = {
-    red: '#123123',
-    blue: '#123123',
+export const Color = {
+  forest: "#228B22",
+  darkGreen: "#023020",
 };

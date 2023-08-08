@@ -1,10 +1,10 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 
 export default function BudgetScreen() {
   return (
-    <View>
+    <SafeAreaView>
       <Text>Budget</Text>
-    </View>
+    </SafeAreaView>
   );
 }
 
