@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "./screens/HomeScreenF/HomeScreen";
 import SavingScreen from "./screens/SavingScreenF/SavingScreen";
@@ -8,15 +8,51 @@ import CheckerScreen from "./screens/CheckerScreenF/CheckerScreen";
 import BudgetScreen from "./screens/BudgetScreenF/BudgetScreen";
 import { Color } from "./constants/color";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import RootStack from "./RootStack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import CheckerSubmitScreen from "./screens/CheckerScreenF/CheckerSubmitF/CheckerSubmitScreen";
+import SavingSubmitScreen from "./screens/SavingScreenF/components/SavingSubmitScreen";
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
+
+function CheckerScreens() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="CheckerScreen"
+        component={CheckerScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="CheckerSubmitScreen"
+        component={CheckerSubmitScreen}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+}
+
+function SavingScreens() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="SavingScreen"
+        component={SavingScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SavingSubmitScreen"
+        component={SavingSubmitScreen}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+}
 
 const App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="RootStack" component={RootStack} />
         <Tab.Screen
           name="Home"
           component={HomeScreen}
@@ -59,7 +95,7 @@ const App = () => {
         />
         <Tab.Screen
           name="Savings"
-          component={SavingScreen}
+          component={SavingScreens}
           options={{
             headerShown: false,
             tabBarIcon: ({ focused }) => (
@@ -70,7 +106,7 @@ const App = () => {
                   style={{
                     width: 25,
                     height: 25,
-                    tintColor: focused ? Color.forest : Color.darkGreen,
+                    tintColor: focused ? "navy" : Color.darkGreen,
                   }}
                 />
               </View>
@@ -79,7 +115,7 @@ const App = () => {
         />
         <Tab.Screen
           name="Checker"
-          component={CheckerScreen}
+          component={CheckerScreens}
           options={{
             headerShown: false,
             tabBarIcon: ({ focused }) => (

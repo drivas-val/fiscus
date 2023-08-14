@@ -10,11 +10,13 @@ import {
   Alert,
   ScrollView,
   Button,
+  TouchableOpacity,
 } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
 import React from "react";
 import { Color } from "../../constants/color";
 import { HideKeyboard } from "../../components/HideKeyboard";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function CheckerScreen({ navigation }: any) {
   const [salary, setSalary] = React.useState("");
@@ -22,14 +24,102 @@ export default function CheckerScreen({ navigation }: any) {
   const [wants, setWants] = React.useState("");
   const [savings, setSavings] = React.useState("");
 
-  const handleSubmit = () => {
-    navigation.navigate("CheckerSubmitScreen");
+  React.useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = () => {
+    try {
+      AsyncStorage.getItem("Salary").then((value) => {
+        if (value != null) {
+          navigation.navigate("CheckerSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Needs").then((value) => {
+        if (value != null) {
+          navigation.navigate("CheckerSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Wants").then((value) => {
+        if (value != null) {
+          navigation.navigate("CheckerSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Savings").then((value) => {
+        if (value != null) {
+          navigation.navigate("CheckerSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const setData = async () => {
+    if (salary.length == 0) {
+      console.log("exception");
+    } else {
+      try {
+        await AsyncStorage.setItem("Salary", salary);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    if (needs.length == 0) {
+      console.log("exception");
+    } else {
+      try {
+        await AsyncStorage.setItem("Needs", needs);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (wants.length == 0) {
+      console.log("exception");
+    } else {
+      try {
+        await AsyncStorage.setItem("Wants", wants);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (
+      parseInt(needs) + parseInt(wants) + parseInt(savings) !=
+      parseInt(salary)
+    ) {
+      Alert.alert(
+        "Oops!",
+        "Please make sure needs, wants, and savings add up to your income."
+      );
+    } else {
+      try {
+        await AsyncStorage.setItem("Savings", savings);
+        navigation.navigate("CheckerSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    // On savings.length add the bottom code and delete all other error alerts!
   };
 
   return (
     <SafeAreaView style={styles.screen}>
       <ScrollView
         keyboardShouldPersistTaps="handled"
+        automaticallyAdjustKeyboardInsets={true}
         contentContainerStyle={{
           flexGrow: 1,
           flexDirection: "column",
@@ -133,7 +223,11 @@ export default function CheckerScreen({ navigation }: any) {
           returnKeyType="done"
           onChangeText={(val) => setSavings(val)}
         />
-        <Button title="Submit" onPress={handleSubmit} />
+        <TouchableOpacity onPress={setData}>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Submit</Text>
+          </View>
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
@@ -153,6 +247,7 @@ const styles = StyleSheet.create({
     margin: 10,
     width: 200,
     marginBottom: 45,
+    borderRadius: 20,
   },
   screen: {
     flex: 1,
@@ -174,5 +269,18 @@ const styles = StyleSheet.create({
     height: 20,
     marginLeft: 5,
     tintColor: "blue",
+  },
+  button: {
+    borderRadius: 8,
+    paddingVertical: 14,
+    paddingHorizontal: 10,
+    backgroundColor: Color.forest,
+  },
+  buttonText: {
+    color: "white",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    fontSize: 20,
+    textAlign: "center",
   },
 });
