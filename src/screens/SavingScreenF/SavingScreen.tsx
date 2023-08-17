@@ -54,14 +54,19 @@ export default function SavingScreen({ navigation }: any) {
     } catch (error) {
       console.log(error);
     }
+    try {
+      AsyncStorage.getItem("Time").then((value) => {
+        if (value != null) {
+          setTime(value);
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
   const setData = async () => {
     const now = Date.now();
     let startOfDay = (now - (now % 86400000)).toString();
-    console.log(now);
-    console.log(startOfDay);
-    setTime(startOfDay);
-    console.log(time);
 
     if (amount.length == 0) {
       bool = false;
@@ -108,6 +113,11 @@ export default function SavingScreen({ navigation }: any) {
     } else if (style === "fixed") {
       setShouldShow(true);
     }
+  };
+
+  const passSubmit = () => {
+    setTime((Date.now() - (Date.now() % 86400000)).toString());
+    setData();
   };
   return (
     <SafeAreaView style={styles.screen}>
@@ -165,7 +175,8 @@ export default function SavingScreen({ navigation }: any) {
             />
           </View>
         ) : null}
-        <TouchableOpacity onPress={setData}>
+        {/* (Date.now() - (Date.now() % 86400000)).toString() */}
+        <TouchableOpacity onPress={passSubmit}>
           <View style={styles.button}>
             <Text style={styles.buttonText}>Submit</Text>
           </View>

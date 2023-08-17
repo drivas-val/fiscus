@@ -31,7 +31,6 @@ export default function CheckerSubmitScreen({ navigation, route }: any) {
     } catch (error) {
       console.log(error);
     }
-
     try {
       AsyncStorage.getItem("Needs").then((value) => {
         if (value != null) {

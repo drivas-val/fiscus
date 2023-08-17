@@ -11,6 +11,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import CheckerSubmitScreen from "./screens/CheckerScreenF/CheckerSubmitF/CheckerSubmitScreen";
 import SavingSubmitScreen from "./screens/SavingScreenF/components/SavingSubmitScreen";
+import BudgetSubmitScreen from "./screens/BudgetScreenF/components/BudgetSubmitScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -49,6 +50,23 @@ function SavingScreens() {
   );
 }
 
+function BudgetScreens() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="BudgetScreen"
+        component={BudgetScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="BudgetSubmitScreen"
+        component={BudgetSubmitScreen}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+}
+
 const App = () => {
   return (
     <NavigationContainer>
@@ -66,7 +84,7 @@ const App = () => {
                   style={{
                     width: 25,
                     height: 25,
-                    tintColor: focused ? Color.forest : Color.darkGreen,
+                    tintColor: focused ? "navy" : Color.darkGreen,
                   }}
                 />
               </View>
@@ -75,7 +93,7 @@ const App = () => {
         />
         <Tab.Screen
           name="Budget"
-          component={BudgetScreen}
+          component={BudgetScreens}
           options={{
             headerShown: false,
             tabBarIcon: ({ focused }) => (

@@ -15,6 +15,7 @@ export default function SavingSubmitScreen({ navigation, route }: any) {
   const [days, setDays] = React.useState("");
   const [style, setStyle] = React.useState("");
   const [time, setTime] = React.useState("");
+  console.log((Date.now() - parseInt(time)) / 86400000);
 
   React.useEffect(() => {
     getData();
@@ -65,7 +66,7 @@ export default function SavingSubmitScreen({ navigation, route }: any) {
       await AsyncStorage.removeItem("Days");
       await AsyncStorage.removeItem("Style");
       await AsyncStorage.removeItem("Time");
-      navigation.navigate("CheckerScreen");
+      navigation.navigate("SavingScreen");
     } catch {
       console.log("error");
     }
@@ -75,9 +76,8 @@ export default function SavingSubmitScreen({ navigation, route }: any) {
     var i = 1;
     var total = 0;
     const numArray = [];
-    const totalArray = [];
-    console.log("One");
-    while (total <= parseInt(amount)) {
+    // const totalArray = [];
+    while (total < parseInt(amount)) {
       numArray.push(i);
       total += i;
       i++;
@@ -100,7 +100,7 @@ export default function SavingSubmitScreen({ navigation, route }: any) {
               return (
                 <View key={num} style={styles.nowBox}>
                   <Text style={styles.nowBoxText}>
-                    Day: {num} | Total: {curr}
+                    Day {num}: {num} | Total: {curr}
                   </Text>
                 </View>
               );
@@ -108,21 +108,117 @@ export default function SavingSubmitScreen({ navigation, route }: any) {
               return (
                 <View key={num} style={styles.box}>
                   <Text style={styles.boxText}>
-                    Day: {num} | Total: {curr}
+                    Day {num}: {num} | Total: {curr}
                   </Text>
                 </View>
               );
             }
           })}
+          <TouchableOpacity onPress={removeData}>
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>Restart</Text>
+            </View>
+          </TouchableOpacity>
+        </ScrollView>
+      </SafeAreaView>
+    );
+  } else if (style === "triangle") {
+    var curr = 0;
+    var i = 1;
+    var total = 0;
+    const numArray = [];
+    // const totalArray = [];
+    while (total <= parseInt(amount)) {
+      numArray.push((i * (i + 1)) / 2);
+      total += (i * (i + 1)) / 2;
+      i++;
+    }
+    return (
+      <SafeAreaView style={styles.screen}>
+        <ScrollView
+          keyboardShouldPersistTaps="handled"
+          automaticallyAdjustKeyboardInsets={true}
+          contentContainerStyle={{
+            flexGrow: 1,
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {numArray.map((num, index) => {
+            curr += num;
+            if (Math.ceil((Date.now() - parseInt(time)) / 86400000) == num) {
+              return (
+                <View key={num} style={styles.nowBox}>
+                  <Text style={styles.nowBoxText}>
+                    Day {index + 1}: {num} | Total: {curr}
+                  </Text>
+                </View>
+              );
+            } else {
+              return (
+                <View key={num} style={styles.box}>
+                  <Text style={styles.boxText}>
+                    Day {index + 1}: {num} | Total: {curr}
+                  </Text>
+                </View>
+              );
+            }
+          })}
+          <TouchableOpacity onPress={removeData}>
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>Restart</Text>
+            </View>
+          </TouchableOpacity>
         </ScrollView>
       </SafeAreaView>
     );
   } else {
+    curr = 0;
+    const numArray = [];
+    for (var i = 1; i < parseInt(days) + 1; i++) {
+      numArray.push(i);
+    }
     return (
-      <SafeAreaView>
-        <Text>Amount - {amount}</Text>
-        <Text>Days - {days}</Text>
-        <Text>Style - {style}</Text>
+      <SafeAreaView style={styles.screen}>
+        <ScrollView
+          keyboardShouldPersistTaps="handled"
+          automaticallyAdjustKeyboardInsets={true}
+          contentContainerStyle={{
+            flexGrow: 1,
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {numArray.map((num) => {
+            curr += Math.round(parseInt(amount) / parseInt(days));
+            if (Math.ceil((Date.now() - parseInt(time)) / 86400000) == num) {
+              return (
+                <View key={num} style={styles.nowBox}>
+                  <Text style={styles.nowBoxText}>
+                    Day {num}: {Math.round(parseInt(amount) / parseInt(days))} |
+                    Total: {curr}
+                  </Text>
+                </View>
+              );
+            } else {
+              return (
+                <View key={num} style={styles.box}>
+                  <Text style={styles.boxText}>
+                    Day {num}: {Math.round(parseInt(amount) / parseInt(days))} |
+                    Total: {curr}
+                  </Text>
+                </View>
+              );
+            }
+          })}
+          <TouchableOpacity onPress={removeData}>
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>Restart</Text>
+            </View>
+          </TouchableOpacity>
+        </ScrollView>
       </SafeAreaView>
     );
   }
@@ -164,5 +260,20 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "green",
     marginHorizontal: "10%",
+  },
+  button: {
+    borderRadius: 8,
+    paddingVertical: 14,
+    paddingHorizontal: 10,
+    backgroundColor: "navy",
+    marginTop: 40,
+    marginBottom: 40,
+  },
+  buttonText: {
+    color: "white",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    fontSize: 20,
+    textAlign: "center",
   },
 });
