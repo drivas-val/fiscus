@@ -426,446 +426,366 @@ export default function BudgetScreen({ navigation }: any) {
   const setData = async () => {
     if (isNaN(rent)) {
       await AsyncStorage.setItem("Rent", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Rent", rent.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(homeInsurance)) {
       await AsyncStorage.setItem("HomeInsurance", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("HomeInsurance", homeInsurance.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(heat)) {
       await AsyncStorage.setItem("Heat", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Heat", heat.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(water)) {
       await AsyncStorage.setItem("Water", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Water", water.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(gas)) {
       await AsyncStorage.setItem("Gas", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Gas", gas.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(electricity)) {
       await AsyncStorage.setItem("Electricity", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Electricity", electricity.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(internet)) {
       await AsyncStorage.setItem("Internet", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Internet", internet.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(housingOther)) {
       await AsyncStorage.setItem("HousingOther", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("HousingOther", housingOther.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(car)) {
       await AsyncStorage.setItem("Car", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Car", car.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(carGas)) {
       await AsyncStorage.setItem("CarGas", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("CarGas", carGas.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(carInsurance)) {
       await AsyncStorage.setItem("CarInsurance", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("CarInsurance", carInsurance.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(carMaintenance)) {
       await AsyncStorage.setItem("CarMaintenance", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("CarMaintenance", carMaintenance.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(transportationOther)) {
       await AsyncStorage.setItem("TransportationOther", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem(
           "TransportationOther",
           transportationOther.toString()
         );
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(food)) {
       await AsyncStorage.setItem("Food", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Food", food.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(groceries)) {
       await AsyncStorage.setItem("Groceries", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Groceries", groceries.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(eatOut)) {
       await AsyncStorage.setItem("EatOut", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("EatOut", eatOut.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(foodOther)) {
       await AsyncStorage.setItem("FoodOther", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("FoodOther", foodOther.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(clothing)) {
       await AsyncStorage.setItem("Clothing", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Clothing", clothing.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(phone)) {
       await AsyncStorage.setItem("Phone", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Phone", phone.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(phonePlan)) {
       await AsyncStorage.setItem("PhonePlan", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("PhonePlan", phonePlan.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(jewelry)) {
       await AsyncStorage.setItem("Jewelry", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Jewelry", jewelry.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(hairCut)) {
       await AsyncStorage.setItem("HairCut", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("HairCut", hairCut.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(medicalBill)) {
       await AsyncStorage.setItem("MedicalBill", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("MedicalBill", medicalBill.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(healthInsurance)) {
       await AsyncStorage.setItem("HealthInsurance", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem(
           "HealthInsurance",
           healthInsurance.toString()
         );
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(medications)) {
       await AsyncStorage.setItem("Medications", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Medications", medications.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(medicalOther)) {
       await AsyncStorage.setItem("MedicalOther", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("MedicalOther", medicalOther.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(gym)) {
       await AsyncStorage.setItem("Gym", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Gym", gym.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(gaming)) {
       await AsyncStorage.setItem("Gaming", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Gaming", gaming.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(music)) {
       await AsyncStorage.setItem("Music", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Music", music.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(videoStream)) {
       await AsyncStorage.setItem("VideoStream", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("VideoStream", videoStream.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(otherMonthly)) {
       await AsyncStorage.setItem("OtherMonthly", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("OtherMonthly", otherMonthly.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(hobbies)) {
       await AsyncStorage.setItem("Hobbies", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Hobbies", hobbies.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(goingOut)) {
       await AsyncStorage.setItem("GoingOut", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("GoingOut", goingOut.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(lifeInsurance)) {
       await AsyncStorage.setItem("LifeInsurance", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("LifeInsurance", lifeInsurance.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(loans)) {
       await AsyncStorage.setItem("Loans", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Loans", loans.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(personalDebt)) {
       await AsyncStorage.setItem("PersonalDebt", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("PersonalDebt", personalDebt.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(childCare)) {
       await AsyncStorage.setItem("ChildCare", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("ChildCare", childCare.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(petCare)) {
       await AsyncStorage.setItem("PetCare", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("PetCare", petCare.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(retirement)) {
       await AsyncStorage.setItem("Retirement", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Retirement", retirement.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }
     }
     if (isNaN(savings)) {
       await AsyncStorage.setItem("Savings", zero.toString());
-      navigation.navigate("BudgetSubmitScreen");
     } else {
       try {
         await AsyncStorage.setItem("Savings", savings.toString());
-        navigation.navigate("BudgetSubmitScreen");
       } catch (error) {
         console.log(error);
       }

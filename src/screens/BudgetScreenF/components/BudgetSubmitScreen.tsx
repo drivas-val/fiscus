@@ -431,245 +431,45 @@ export default function BudgetSubmitScreen({ navigation, route }: any) {
   const removeData = async () => {
     try {
       await AsyncStorage.removeItem("Rent");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("HomeInsurance");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Heat");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Water");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Gas");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Electricity");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Internet");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("HousingOther");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Car");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("CarGas");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("CarInsurance");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("CarMaintenance");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("TransportationOther");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Food");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Groceries");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("EatOut");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Clothing");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Phone");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("PhonePlan");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Jewelry");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("HairCut");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("MedicalBill");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("HealthInsurance");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Medications");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("MedicalOther");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Gym");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Gaming");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("FoodOther");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Music");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("VideoStream");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("OtherMonthly");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Hobbies");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("GoingOut");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("LifeInsurance");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Loans");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("PersonalDebt");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("ChildCare");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("PetCare");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Retirement");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("Savings");
-      navigation.navigate("BudgetScreen");
-    } catch {
-      console.log("error");
-    }
-    try {
       await AsyncStorage.removeItem("ExtraneousOther");
       navigation.navigate("BudgetScreen");
     } catch {

@@ -72,26 +72,6 @@ const App = () => {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen
-          name="Budget"
-          component={BudgetScreens}
-          options={{
-            headerShown: false,
-            tabBarIcon: ({ focused }) => (
-              <View>
-                <Image
-                  source={require("../assets/budget.png")}
-                  resizeMode="contain"
-                  style={{
-                    width: 25,
-                    height: 25,
-                    tintColor: focused ? "black" : Color.darkGreen,
-                  }}
-                />
-              </View>
-            ),
-          }}
-        />
-        <Tab.Screen
           name="Savings"
           component={SavingScreens}
           options={{
@@ -105,6 +85,26 @@ const App = () => {
                     width: 25,
                     height: 25,
                     tintColor: focused ? "navy" : Color.darkGreen,
+                  }}
+                />
+              </View>
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Budget"
+          component={BudgetScreens}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ focused }) => (
+              <View>
+                <Image
+                  source={require("../assets/budget.png")}
+                  resizeMode="contain"
+                  style={{
+                    width: 25,
+                    height: 25,
+                    tintColor: focused ? "black" : Color.darkGreen,
                   }}
                 />
               </View>
