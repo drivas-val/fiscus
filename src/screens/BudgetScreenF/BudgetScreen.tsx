@@ -35,7 +35,6 @@ export default function BudgetScreen({ navigation }: any) {
   const [phonePlan, setPhonePlan] = React.useState(0);
   const [jewelry, setJewelry] = React.useState(0);
   const [hairCut, setHairCut] = React.useState(0);
-  const [personalOther, setPersonalOther] = React.useState(0);
   const [medicalBill, setMedicalBill] = React.useState(0);
   const [healthInsurance, setHealthInsurance] = React.useState(0);
   const [medications, setMedications] = React.useState(0);
@@ -64,6 +63,357 @@ export default function BudgetScreen({ navigation }: any) {
   const getData = () => {
     try {
       AsyncStorage.getItem("Rent").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("HomeInsurance").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Heat").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Water").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Gas").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Electricity").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Internet").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("HousingOther").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Car").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("CarGas").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("CarInsurance").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("CarMaintenance").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("TransportationOther").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Food").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Groceries").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("EatOut").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Clothing").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Phone").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("PhonePlan").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Jewelry").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("HairCut").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("MedicalBill").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("HealthInsurance").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Medications").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("MedicalOther").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Gym").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Gaming").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Music").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("VideoStream").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("OtherMonthly").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Hobbies").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("GoingOut").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("LifeInsurance").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Loans").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("PersonalDebt").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("ChildCare").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("PetCare").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Retirement").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("Savings").then((value) => {
+        if (value != null) {
+          navigation.navigate("BudgetSubmitScreen");
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+    try {
+      AsyncStorage.getItem("ExtraneousOther").then((value) => {
         if (value != null) {
           navigation.navigate("BudgetSubmitScreen");
         }
@@ -162,6 +512,378 @@ export default function BudgetScreen({ navigation }: any) {
         console.log(error);
       }
     }
+    if (isNaN(car)) {
+      await AsyncStorage.setItem("Car", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Car", car.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(carGas)) {
+      await AsyncStorage.setItem("CarGas", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("CarGas", carGas.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(carInsurance)) {
+      await AsyncStorage.setItem("CarInsurance", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("CarInsurance", carInsurance.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(carMaintenance)) {
+      await AsyncStorage.setItem("CarMaintenance", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("CarMaintenance", carMaintenance.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(transportationOther)) {
+      await AsyncStorage.setItem("TransportationOther", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem(
+          "TransportationOther",
+          transportationOther.toString()
+        );
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(food)) {
+      await AsyncStorage.setItem("Food", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Food", food.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(groceries)) {
+      await AsyncStorage.setItem("Groceries", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Groceries", groceries.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(eatOut)) {
+      await AsyncStorage.setItem("EatOut", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("EatOut", eatOut.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(foodOther)) {
+      await AsyncStorage.setItem("FoodOther", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("FoodOther", foodOther.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(clothing)) {
+      await AsyncStorage.setItem("Clothing", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Clothing", clothing.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(phone)) {
+      await AsyncStorage.setItem("Phone", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Phone", phone.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(phonePlan)) {
+      await AsyncStorage.setItem("PhonePlan", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("PhonePlan", phonePlan.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(jewelry)) {
+      await AsyncStorage.setItem("Jewelry", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Jewelry", jewelry.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(hairCut)) {
+      await AsyncStorage.setItem("HairCut", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("HairCut", hairCut.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(medicalBill)) {
+      await AsyncStorage.setItem("MedicalBill", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("MedicalBill", medicalBill.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(healthInsurance)) {
+      await AsyncStorage.setItem("HealthInsurance", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem(
+          "HealthInsurance",
+          healthInsurance.toString()
+        );
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(medications)) {
+      await AsyncStorage.setItem("Medications", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Medications", medications.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(medicalOther)) {
+      await AsyncStorage.setItem("MedicalOther", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("MedicalOther", medicalOther.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(gym)) {
+      await AsyncStorage.setItem("Gym", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Gym", gym.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(gaming)) {
+      await AsyncStorage.setItem("Gaming", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Gaming", gaming.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(music)) {
+      await AsyncStorage.setItem("Music", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Music", music.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(videoStream)) {
+      await AsyncStorage.setItem("VideoStream", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("VideoStream", videoStream.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(otherMonthly)) {
+      await AsyncStorage.setItem("OtherMonthly", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("OtherMonthly", otherMonthly.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(hobbies)) {
+      await AsyncStorage.setItem("Hobbies", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Hobbies", hobbies.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(goingOut)) {
+      await AsyncStorage.setItem("GoingOut", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("GoingOut", goingOut.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(lifeInsurance)) {
+      await AsyncStorage.setItem("LifeInsurance", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("LifeInsurance", lifeInsurance.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(loans)) {
+      await AsyncStorage.setItem("Loans", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Loans", loans.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(personalDebt)) {
+      await AsyncStorage.setItem("PersonalDebt", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("PersonalDebt", personalDebt.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(childCare)) {
+      await AsyncStorage.setItem("ChildCare", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("ChildCare", childCare.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(petCare)) {
+      await AsyncStorage.setItem("PetCare", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("PetCare", petCare.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(retirement)) {
+      await AsyncStorage.setItem("Retirement", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Retirement", retirement.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(savings)) {
+      await AsyncStorage.setItem("Savings", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem("Savings", savings.toString());
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    if (isNaN(extraneousOther)) {
+      await AsyncStorage.setItem("ExtraneousOther", zero.toString());
+      navigation.navigate("BudgetSubmitScreen");
+    } else {
+      try {
+        await AsyncStorage.setItem(
+          "ExtraneousOther",
+          extraneousOther.toString()
+        );
+        navigation.navigate("BudgetSubmitScreen");
+      } catch (error) {
+        console.log(error);
+      }
+    }
   };
 
   return (
@@ -197,7 +919,6 @@ export default function BudgetScreen({ navigation }: any) {
             placeholder="$"
             keyboardType="numeric"
             returnKeyType="done"
-            defaultValue="0"
             onChangeText={(val) => setRent(parseInt(val))}
           />
         </View>
@@ -911,7 +1632,8 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingVertical: 14,
     paddingHorizontal: 10,
-    backgroundColor: Color.forest,
+    backgroundColor: "black",
+    marginBottom: 80,
   },
   buttonText: {
     color: "white",

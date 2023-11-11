@@ -72,26 +72,6 @@ const App = () => {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{
-            headerShown: false,
-            tabBarIcon: ({ focused }) => (
-              <View>
-                <Image
-                  source={require("../assets/homeIcon.png")}
-                  resizeMode="contain"
-                  style={{
-                    width: 25,
-                    height: 25,
-                    tintColor: focused ? "navy" : Color.darkGreen,
-                  }}
-                />
-              </View>
-            ),
-          }}
-        />
-        <Tab.Screen
           name="Budget"
           component={BudgetScreens}
           options={{
@@ -104,7 +84,7 @@ const App = () => {
                   style={{
                     width: 25,
                     height: 25,
-                    tintColor: focused ? Color.forest : Color.darkGreen,
+                    tintColor: focused ? "black" : Color.darkGreen,
                   }}
                 />
               </View>
